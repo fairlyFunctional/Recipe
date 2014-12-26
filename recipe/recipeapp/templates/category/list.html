@@ -1,0 +1,10 @@
+<h1>{{ category.name }}</h1>
+<table>
+{% for recipe in category.get_recipes %}
+<tr>
+	<td><a href="/recipe/{{ recipe.id }}/">{{ recipe.name }}</a></td>
+	<td><a href="/recipe/{{ recipe.id }}/edit">edit</a></td>
+	<td><a href="/recipe/{{ recipe.id }}/delete">delete</a></td>
+	</tr>
+{% endfor %}
+</table>
